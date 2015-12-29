@@ -3,7 +3,9 @@
 use strict;
 use CGI::Pretty qw/:standard/;
 
-use constant TITLE => 'Dice Rolling';
+use constant TITLE => '5ca7 (Scat)';
+use constant HEAD1 => 'Hello, I am 5ca7 (Scat) or 5ca77r (Scatter)';
+use constant HEAD2 => 'I am lazy an I haven\'t made a website yet so have fun with this dice roller below:';
 my $_rolls = param('rolls');
 my $_sides = param('sides');
 
@@ -32,7 +34,8 @@ sub roll {
 print
     header,
     start_html(-title => TITLE),
-      h1(TITLE),
+      h1(HEAD1),
+      h2(HEAD2),
       hr,
       $show_result,
       start_form,
